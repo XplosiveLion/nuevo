@@ -1,0 +1,189 @@
+body {
+    font-family: 'Roboto', 'Lilita One' sans-serif;
+    box-sizing: border-box;
+}
+
+.ancho {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+  }
+  
+  .logo img {
+    width: 200px;
+    height: auto;
+  }
+  .menu-toggle {
+    background-color: #5865F2;
+    border-radius: 10px;
+    padding: 5px 5px;
+    align-items: center;
+    display: none; /* Ocultar por defecto */
+}
+  
+.menu-toggle button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  align-items: center;
+}
+
+.menu-toggle i {
+  width: 24px;
+  height: 24px;
+  font-size: 25px;
+  fill: #ffffff;
+  transition: transform 0.4s ease-in-out; /* Transition for button icon */
+}
+  .menu {
+    display: block;
+    justify-content: center;
+}
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    justify-content: space-evenly;
+  }
+  
+  nav ul li {
+    margin: 0;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    color: #007BFF;
+  }
+  
+  nav ul li a:hover {
+    background-color: #007BFF;
+    color: white;
+  }
+  
+  /* Main content */
+  main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .content {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .text-content {
+    width: 50%;
+  }
+  .text-content h2{
+    color: #CC9000;
+  }
+  
+  .image-content {
+    flex: 1;
+    border: 1px solid #636363;
+    /* Aquí puedes ajustar el tamaño y el fondo si no hay imagen */
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    display: none;
+  }
+  .image-content img{
+    width: 100%;
+    height: auto;
+  }
+  .image-content-text{
+    padding-right: 10px;
+  }
+
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background-color: #5865F2;
+    padding: 10px;
+    color: white;
+    width: 100%;
+    margin: auto;
+  }
+
+
+  
+
+
+  @keyframes slideInRight {
+    from {
+        transform: translateX(100%); /* Start from outside the screen */
+    }
+    to {
+        transform: translateX(0); /* Slide in from the right */
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0); /* Start from visible position */
+    }
+    to {
+        transform: translateX(100%); /* Slide out to the right */
+    }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: flex; /* Mostrar el botón en pantallas pequeñas */
+  }
+
+.menu {
+  display: none;
+}
+
+  .menu nav.active {
+      display: block; /* Mostrar el menú cuando se activa */
+  }
+
+  .menu nav ul {
+      flex-direction: column; /* Cambiar a columna en móviles */
+      padding: 10px 0;
+      
+  }
+
+  .menu nav ul li a {
+      display: block; /* Hacer que los enlaces ocupen todo el ancho */
+      color: #003267; /* Color del texto de los enlaces */
+      padding: 10px 15px;
+      text-align: center;
+      border: none;
+      
+  }
+  .menu nav ul li {
+    border-bottom: #636363 1px solid;
+  }
+}
